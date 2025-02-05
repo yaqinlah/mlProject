@@ -57,7 +57,7 @@ class ModelTrainer:
             if not model_report:
                 raise CustomException('No models trained successfully')
 
-            # Ambil model terbaik berdasarkan r2_test
+
             best_model_name = max(model_report, key=lambda x: model_report[x]['r2_test'])
             best_model = models[best_model_name]
             best_r2_train = model_report[best_model_name]['r2_train']
